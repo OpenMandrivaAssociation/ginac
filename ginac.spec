@@ -12,8 +12,8 @@ License:	GPL
 Group:		Sciences/Mathematics
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/%{name}-%{version}.tar.bz2
 URL:		http://www.ginac.de/
-Requires(post):	/sbin/install-info
-Requires(preun): /sbin/install-info
+Requires(post):	info-install
+Requires(preun): info-install
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  chrpath
 BuildRequires:	cln-devel
