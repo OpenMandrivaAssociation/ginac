@@ -26,7 +26,6 @@ BuildRequires:  tetex-latex
 BuildRequires:  transfig
 Obsoletes:      GiNaC < %{version}-%{release}
 Provides:       GiNaC = %{version}-%{release}
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 GiNaC is Not a Cocktail.
