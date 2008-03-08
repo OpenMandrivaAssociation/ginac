@@ -7,9 +7,9 @@
 
 Name:           ginac
 Version:        1.4.1
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        C++ class library for symbolic calculations
-License:        GPL
+License:        GPLv2+
 Group:          Sciences/Mathematics
 Source0:        ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/ginac-%{version}.tar.bz2
 URL:            http://www.ginac.de/
@@ -24,6 +24,8 @@ BuildRequires:  tetex
 BuildRequires:  tetex-dvips
 BuildRequires:  tetex-latex
 BuildRequires:  transfig
+BuildRequires:	bison
+BuildRequires:	flex
 Obsoletes:      GiNaC < %{version}-%{release}
 Provides:       GiNaC = %{version}-%{release}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -113,19 +115,19 @@ for developing GiNaC applications.
 %_remove_install_info ginac.info
 
 %files
-%defattr(-,root,root,0755)
+%defattr(-,root,root)
+%doc AUTHORS NEWS README
 %{_bindir}/ginsh
 %{_bindir}/viewgar
 %{_mandir}/man1/ginsh.1*
 %{_mandir}/man1/viewgar.1*
 
 %files -n %{libname}
-%defattr(-,root,root,0755)
-%doc AUTHORS COPYING NEWS README
-%{_libdir}/*.so.*
+%defattr(-,root,root)
+%{_libdir}/*.so.%{major}*
 
 %files -n %{libname_devel}
-%defattr(-,root,root,0755)
+%defattr(-,root,root)
 %doc ChangeLog
 %{_bindir}/ginac-excompiler
 %{_includedir}/*
@@ -135,5 +137,5 @@ for developing GiNaC applications.
 %{_infodir}/*.info*
 
 %files -n %{libname_static_devel}
-%defattr(-,root,root,0755)
+%defattr(-,root,root)
 %{_libdir}/*.a
