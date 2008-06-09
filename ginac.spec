@@ -104,9 +104,13 @@ for developing GiNaC applications.
 %clean
 %{__rm} -rf %{buildroot}
 
+%if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -n %{libname} -p /sbin/ldconfig
+%endif
 
 %post -n %{libname_devel}
 %_install_info ginac.info
