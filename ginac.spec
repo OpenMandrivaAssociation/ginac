@@ -1,4 +1,4 @@
-%define api_version 1.4
+%define api_version 1.5
 %define major 0
 
 %define libname              %mklibname ginac %{api_version} %{major}
@@ -6,8 +6,8 @@
 %define libname_static_devel %mklibname ginac %{api_version} -d -s
 
 Name:           ginac
-Version:        1.4.3
-Release:        %mkrel 2
+Version:        1.5.1
+Release:        %mkrel 1
 Summary:        C++ class library for symbolic calculations
 License:        GPLv2+
 Group:          Sciences/Mathematics
