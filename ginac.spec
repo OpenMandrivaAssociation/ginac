@@ -6,14 +6,13 @@
 %define libname_static_devel %mklibname ginac %{api_version} -d -s
 
 Name:           ginac
-Version:        1.5.1
+Version:        1.5.3
 Release:        %mkrel 4
 Summary:        C++ class library for symbolic calculations
 License:        GPLv2+
 Group:          Sciences/Mathematics
 URL:            http://www.ginac.de/
 Source0:        ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/ginac-%{version}.tar.bz2
-Patch:          ginac-1.5.1-fix-build.patch
 Requires(post): info-install
 Requires(preun): info-install
 BuildRequires:  chrpath
@@ -87,7 +86,6 @@ for developing GiNaC applications.
 
 %prep
 %setup -q
-%patch -p 1
 
 %build
 %{configure2_5x}
