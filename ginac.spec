@@ -7,7 +7,7 @@
 
 Name:           ginac
 Version:        1.5.3
-Release:        %mkrel 4
+Release:        %mkrel 5
 Summary:        C++ class library for symbolic calculations
 License:        GPLv2+
 Group:          Sciences/Mathematics
