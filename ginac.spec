@@ -13,6 +13,7 @@ License:        GPLv2+
 Group:          Sciences/Mathematics
 URL:            http://www.ginac.de/
 Source0:        ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/ginac-%{version}.tar.bz2
+Patch0:		ginac-1.5.3-fix-precision.patch
 Requires(post): info-install
 Requires(preun): info-install
 BuildRequires:  chrpath
@@ -86,6 +87,7 @@ for developing GiNaC applications.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{configure2_5x}
