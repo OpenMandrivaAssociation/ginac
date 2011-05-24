@@ -1,4 +1,4 @@
-%define major 0
+%define major 2
 
 %define libname              %mklibname ginac %{major}
 %define libname_devel        %mklibname ginac -d
@@ -54,6 +54,7 @@ Summary:        Libraries, includes and more for developing GiNaC applications
 Group:          Development/C++
 Requires:       %{libname} = %{version}-%{release}
 Provides:       ginac-devel = %{version}-%{release}
+Obsoletes:	%{_lib}ginac1.5-devel
 
 %description -n        %{libname_devel}
 GiNaC is Not a Cocktail.
@@ -70,6 +71,7 @@ Summary:        Static libraries for developing GiNaC applications
 Group:          Development/C++
 Requires:       %{libname} = %{version}-%{release}
 Provides:       ginac-static-devel = %{version}-%{release}
+Obsoletes;	%{_lib}ginac1.5-static-devel
 
 %description -n %{libname_static_devel}
 GiNaC is Not a Cocktail.
