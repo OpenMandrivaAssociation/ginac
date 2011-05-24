@@ -71,7 +71,7 @@ Summary:        Static libraries for developing GiNaC applications
 Group:          Development/C++
 Requires:       %{libname} = %{version}-%{release}
 Provides:       ginac-static-devel = %{version}-%{release}
-Obsoletes;	%{_lib}ginac1.5-static-devel
+Obsoletes:	%{_lib}ginac1.5-static-devel
 
 %description -n %{libname_static_devel}
 GiNaC is Not a Cocktail.
