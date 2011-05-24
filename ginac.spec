@@ -1,12 +1,11 @@
-%define api_version 1.5
 %define major 0
 
-%define libname              %mklibname ginac %{api_version} %{major}
-%define libname_devel        %mklibname ginac %{api_version} -d
-%define libname_static_devel %mklibname ginac %{api_version} -d -s
+%define libname              %mklibname ginac %{major}
+%define libname_devel        %mklibname ginac -d
+%define libname_static_devel %mklibname ginac -d -s
 
 Name:           ginac
-Version:        1.5.8
+Version:        1.6.0
 Release:        %mkrel 1
 Summary:        C++ class library for symbolic calculations
 License:        GPLv2+
@@ -55,7 +54,6 @@ Summary:        Libraries, includes and more for developing GiNaC applications
 Group:          Development/C++
 Requires:       %{libname} = %{version}-%{release}
 Provides:       ginac-devel = %{version}-%{release}
-Provides:       ginac%{api_version}-devel = %{version}-%{release}
 
 %description -n        %{libname_devel}
 GiNaC is Not a Cocktail.
@@ -72,7 +70,6 @@ Summary:        Static libraries for developing GiNaC applications
 Group:          Development/C++
 Requires:       %{libname} = %{version}-%{release}
 Provides:       ginac-static-devel = %{version}-%{release}
-Provides:       ginac%{api_version}-static-devel = %{version}-%{release}
 
 %description -n %{libname_static_devel}
 GiNaC is Not a Cocktail.
@@ -88,15 +85,12 @@ for developing GiNaC applications.
 %setup -q
 
 %build
-%{configure2_5x}
+%{configure2_5x} --disable-rpath
 %{make}
 
 %install
 %{__rm} -rf %{buildroot}
 %{makeinstall_std}
-
-%{_bindir}/chrpath -d %{buildroot}%{_libdir}/libginac-%{api_version}.so.%{major}.*.*
-%{_bindir}/chrpath -d %{buildroot}%{_bindir}/{ginsh,viewgar}
 
 %check
 %{make} check
