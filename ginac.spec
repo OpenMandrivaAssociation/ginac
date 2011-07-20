@@ -5,7 +5,7 @@
 %define libname_static_devel %mklibname ginac -d -s
 
 Name:           ginac
-Version:        1.6.0
+Version:        1.6.1
 Release:        %mkrel 1
 Summary:        C++ class library for symbolic calculations
 License:        GPLv2+
