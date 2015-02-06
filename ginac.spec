@@ -6,7 +6,7 @@
 
 Name:		ginac
 Version:	1.6.2
-Release:	1
+Release:	2
 Summary:	C++ class library for symbolic calculations
 License:	GPLv2+
 Group:		Sciences/Mathematics
