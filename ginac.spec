@@ -10,7 +10,7 @@ Release:	2
 Summary:	C++ class library for symbolic calculations
 License:	GPLv2+
 Group:		Sciences/Mathematics
-URL:		http://www.ginac.de/
+URL:		https://www.ginac.de/
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/ginac-%{version}.tar.bz2
 BuildRequires:	chrpath
 BuildRequires:	cln-devel
